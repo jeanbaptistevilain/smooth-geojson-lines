@@ -9,16 +9,21 @@ This program relies on 2 existing libs for the operation :
 [Simplify.js]: https://mourner.github.io/simplify-js/
 [Turf.js]: http://turfjs.org/docs/#bezierSpline
 
+## Configuration
+The output can currently be configured using the config object at the beginning of the script. This object exposes the main params of Simplify.js and Turf.js via the `simplify` and `bezier` keys respectively.
+Please refer to the corresponding [Simplify.js] and [Turf.js] docs in order to adjust the output for your scenario.
+
+
 ## Usage
 The program currently works with https-served GeoJSON files using WGS84 coordinates. It can be called via :
 
-`npm run smoothen -- "https://..."`
+`npm run smoothen -- "https://raw.githubusercontent.com/jeanbaptistevilain/smooth-geojson-lines/master/example/france_metropolitaine.geojson"`
 
 or just :
 
-`node index.js "https://..."`
+`node index.js "https://raw.githubusercontent.com/jeanbaptistevilain/smooth-geojson-lines/master/example/france_metropolitaine.geojson"`
 
-_Note : this program provides a way to smoothen GeoJSON files in the CLI, it is currently not optimized for runtime use._
+_Note : this program provides a way to smoothen GeoJSON files via an offline command, it is currently not optimized for runtime use._
 
  
 
